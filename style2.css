@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --shadow :0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+background-color: white;
+scroll-behavior: smooth;
+scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar{
+width: .0rem;
+}
+
+nav ul.hidden {
+  display: none;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 25px;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+nav div img {
+  width: 100px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 5px 0;
+  transition: all;
+  line-height: 60px;
+  transition-duration: 300ms;
+}
+
+nav ul li a:hover {
+  border-bottom: 1px solid black;
+}
+
+nav ul li a:hover {
+  font-size: 220%;
+}
+
+.nama {
+  position: absolute;
+  list-style-type: none;
+  top: 30%;
+  left: 15%;
+}
+
+.nama li{
+  padding: 5px;
+}
+
+.nama li a {
+  font-family: 'Comfortaa', cursive;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.nama li a:hover {
+  color: rgb(179, 12, 12);
+}
+
+.nama li:hover {
+  font-size:150%;
+}
+
+.foto {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  z-index: -1;
+}
+
+.foto img {
+  width: 400px;
+  height: 400px;
+}
+
+.bio {
+  position: absolute;
+  top: 80%;
+  left: 64%;
+  z-index: -1;
+}
+
+
+/* Media Query */
+
+/* tablet dan mobile */
+@media only screen and (max-width: 768px) {
+  .nama h1 a {
+    font-size: 50px;
+  }
+
+  .menu p {
+      font-size: 16px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .foto img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .foto {
+    position: absolute;
+    top: 28%;
+    left: 45%;
+  }
+  
+  .nama li a {
+    font-size: 20px;
+  }
+
+  .bio {
+    position: absolute;
+    top: 79%;
+    left: 58%;
+  }
+
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+  
+  .nama h1 a {
+    font-size: 40px;
+  }
+
+  .menu p {
+      font-size: 12px;
+  }
+
+  nav ul li a {
+    font-size: 25px;
+    line-height: 70px;
+  }
+
+  nav ul li a:hover {
+    font-size: 28px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .foto img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .foto {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+  }
+  
+  .nama li a {
+    font-size: 10px;
+  }
+
+  .bio {
+    position: absolute;
+    top: 56%;
+    left: 56%;
+  }
+
+}

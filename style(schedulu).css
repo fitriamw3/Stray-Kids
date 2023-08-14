@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar{
+  width: .0rem;
+}
+
+nav ul.hidden {
+  display: none;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 25px;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+nav div img {
+  width: 100px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 5px 0;
+  transition: all;
+  line-height: 60px;
+  transition-duration: 300ms;
+}
+
+nav ul li a:hover {
+  border-bottom: 1px solid black;
+}
+
+nav ul li a:hover {
+  font-size: 220%;
+}
+
+.menu {
+    width: 100%;
+    height: 100vh;
+    background-color: grb(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nama {
+    text-align: center;
+}
+
+.menu p {
+    font-family: arial;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 50px;
+    text-shadow: var(--shadow);
+}
+
+.nama h1 a {
+    font-family: sans-serif;
+    font-size: 80px;
+    color: black;
+    margin-bottom: 50px;
+    text-decoration: none;
+    text-shadow: var(--shadow);
+    transition: 0.5s;
+}
+
+.nama a:hover{
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+}
+
+.judul {
+  position: absolute;
+  font-size: 20px;
+  font-family: 'Comfortaa' sans-serif;
+  top: 17%;
+  left: 35%;
+  z-index: -1;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+}
+
+
+#calendar {
+  width: 90%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+
+
+ 
+/* Media Query */
+
+/* tablet dan mobile */
+@media only screen and (max-width: 768px) {
+    .nama h1 a {
+      font-size: 50px;
+    }
+
+    .menu p {
+        font-size: 16px;
+    }
+
+    .judul {
+      font-size: 15px;
+  }
+
+    #calendar {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+
+    }
+
+}
+  
+  /* mobile phone */
+  @media (max-width: 576px) {
+    html {
+      font-size: 55%;
+    }
+    
+    .nama h1 a {
+      font-size: 40px;
+    }
+
+    .menu p {
+        font-size: 12px;
+    }
+
+    nav ul li a {
+      font-size: 25px;
+      line-height: 70px;
+    }
+
+    nav ul li a:hover {
+      font-size: 28px;
+    }
+
+    .judul {
+      font-size: 12px;
+  }
+
+    #calendar {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+
+    }
+  
+  }

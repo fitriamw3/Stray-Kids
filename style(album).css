@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --shadow :0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+background-color: white;
+scroll-behavior: smooth;
+scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar{
+width: .0rem;
+}
+
+nav ul.hidden {
+  display: none;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 25px;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+nav div img {
+  width: 100px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 5px 0;
+  transition: all;
+  line-height: 60px;
+  transition-duration: 300ms;
+}
+
+nav ul li a:hover {
+  border-bottom: 1px solid black;
+}
+
+nav ul li a:hover {
+  font-size: 220%;
+}
+
+
+.judul {
+  position: absolute;
+  font-size: 20px;
+  font-family: 'Comfortaa' sans-serif;
+  top: 17%;
+  left: 4.5%;
+  z-index: -1;
+}
+
+.foto img {
+  width: 140px;
+  height: 140px;
+  display: block;
+  border-radius: 5px;
+}
+
+.foto {
+  position: absolute;
+  top: 30%;
+  left: 4.5%;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 20px;
+  z-index: -1;
+}
+
+.foto img:hover {
+  transform: scale(1.2);
+}
+
+.foto p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+  /* Media Query */
+  
+  /* tablet */
+  @media only screen and (max-width: 768px) {
+    .nama h1 a {
+      font-size: 50px;
+    }
+  
+    .menu p {
+        font-size: 16px;
+    }
+
+    .judul {
+        font-size: 15px;
+    }
+
+    .foto {
+        grid-template-columns: 2fr 2fr;
+        position: absolute;
+        left: 10%;
+    }
+
+    .foto img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .foto img:hover {
+      transform: scale(1.1);
+  }
+
+    .foto p {
+        font-size: 12px;
+    }
+}
+  
+  /* mobile phone */
+  @media (max-width: 576px) {
+    html {
+      font-size: 55%;
+    }
+    
+    .nama h1 a {
+      font-size: 40px;
+    }
+  
+    .menu p {
+        font-size: 12px;
+    }
+  
+    nav ul li a {
+      font-size: 25px;
+      line-height: 70px;
+    }
+
+    nav ul li a:hover {
+      font-size: 28px;
+    }
+
+    .judul {
+        font-size: 14px;
+        top: 20%;
+        left: 20%;
+    }
+
+    .foto {
+        grid-template-columns: 1fr;
+        position: center;
+        left: 20%;
+    }
+
+    .foto img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .foto img:hover {
+        transform: scale(1.1);
+    }
+
+    .foto p {
+        font-size: 12px;
+    }
+    
+  }
